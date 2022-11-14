@@ -1,0 +1,60 @@
+[
+    [{
+           
+            "lat": 17.67647,
+            "lon": -101.6531,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+           
+        },
+        {
+            
+            "lat": 17.68233,
+            "lon": -101.6457,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+           
+        },
+        {
+            
+            "lat": 17.67347,
+            "lon": -101.643,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+            
+        },
+        {
+            
+            "lat": 17.66331,
+            "lon": -101.6154,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+            
+        },
+        {
+           
+            "lat": 17.66222,
+            "lon": -101.6093,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+        
+        },
+        {
+            
+            "lat": 17.66058,
+            "lon": -101.6059,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+           
+        },
+        {
+            
+            "lat": 17.65794,
+            "lon": -101.6025,
+            "titulo":"Geomatica",
+            "titulo2":"ejemplo2"
+            
+        }
+        
+    ]
+    ]
