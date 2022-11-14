@@ -1,5 +1,7 @@
 
 
+
+
 async function pintaPuntos(urlData, divMapa, nombreCampo) {
   var script = document.createElement("script");
   script.src =
@@ -17,9 +19,15 @@ async function pintaPuntos(urlData, divMapa, nombreCampo) {
       $.ajax({
         url: urlData,
         dataType: "json",
-        cache: false,
         async: true,
+        contentType: 'application/json',
         method: "GET",
+        headers: {
+          'Access-Control-Allow-Credentials' : true,
+          'Access-Control-Allow-Origin':'*',
+          'Access-Control-Allow-Methods':'GET',
+          'Access-Control-Allow-Headers':'application/json',
+        },
       }).then(function (data) {
           console.log(data);
         const features = data.flat();
@@ -164,13 +172,10 @@ async function mapa(graphics, fields, generaFieldInfo, divMapa, nombreCampo) {
 
         applyEditsToLayer(addEdits);
       
-
-
       function applyEditsToLayer(edits) {
         layerRandom
           .applyEdits(edits)
-          .then((results) => {
-           
+          .then((results) => {           
             if (results.addFeatureResults.length > 0) {
               var objectIds = [];
               results.addFeatureResults.forEach((item) => {
@@ -204,9 +209,6 @@ async function mapa(graphics, fields, generaFieldInfo, divMapa, nombreCampo) {
   
       layerRandom.popupTemplate.content = [
         {
-          // It is also possible to set the fieldInfos outside of the content
-          // directly in the popupTemplate. If no fieldInfos is specifically set
-          // in the content, it defaults to whatever may be set within the popupTemplate.
           type: "fields",
           fieldInfos: generaFieldInfo,
         },
@@ -217,16 +219,12 @@ async function mapa(graphics, fields, generaFieldInfo, divMapa, nombreCampo) {
     });
 
 
-    //view.goTo( graphicsLayer.graphics );
-
-
-        console.log(graphics, fields, generaFieldInfo);
+        //view.goTo( graphicsLayer.graphics );
+        //console.log(graphics, fields, generaFieldInfo);
 
       });
     }, 3000);
     resolve("Mapa");
   });
 }
-
-//export { geometria };
 
